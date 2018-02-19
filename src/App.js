@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Home from './routes/Home'
 import List from './routes/List'
-import Write from './routes/Write'
+import WriteMenu from './routes/WriteMenu'
 import Header from './components/Header'
+import Write from './components/Write'
+import View from './routes/View'
 
 class App extends Component {
   render() {
@@ -14,8 +16,10 @@ class App extends Component {
         <div>
           <Header/>
           <div>
-            <Route path='/' component={Home}/>
+            <Route exact path='/' component={Home}/>
             <Route path='/list' component={List}/>
+            <Route path='/view' component={View}/>
+            <Route path='/write' component={WriteMenu}/>
             <Route path='/write' component={Write}/>
           </div>
         </div>

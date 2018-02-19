@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Write = () => {
+const View = () => {
   return(
     <div>
-      write
+      View
     </div>
   );
 }
 
-export default Write
+export default View
