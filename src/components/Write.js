@@ -2,19 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './Write.css';
 import { Button } from 'reactstrap';
+import { connect } from 'react-redux';
 
-export default class Write extends React.Component {
+class Write extends React.Component {
 
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            contents: '',
-            title: ''
-        };
+ const { index, title, contents } = state;
 
         this.handleChange = this.handleChange.bind(this);
-    }
+    
 
     // handleChange(e) {
     //     this.setState({
@@ -54,4 +49,6 @@ return (
           );
         }
 
-}
+};
+
+export default connect()(Write);

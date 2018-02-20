@@ -7,15 +7,23 @@ const CREATE_POST = 'CREATE_POST';
 export const createPost = createAction(CREATE_POST); // {index, title, contents}
 
 const initialState = {
-  posts: [],
-  post: {
+ 
+  posts: [{
         index: 0,
-        title: '',
-        contents: ''
-        }   
+        title: 'a',
+        contents: 'aaa'
+        },{
+            index: 0,
+            title: 'b',
+            contents: 'bbb'
+        },{
+            index: 0,
+            title: 'c',
+            contents: 'ccc'
+        }]   
 };
 
-export default function write(state=initialState, action) {
+export default function reducer(state=initialState, action) {
     const { posts } = state;
   switch(action.type) {
         case CREATE_POST:
